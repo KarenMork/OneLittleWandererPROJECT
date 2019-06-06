@@ -1,0 +1,247 @@
+/*This code applies Box layout Model to all elements, whilst allowing components to change, whilst containing your padding. The asterisk means "all" childs of the parent will inherit border box. It won't add to the broswer*/
+
+/*margin-top: -7px;*/
+
+  html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .nav-opened{
+    position: fixed;
+  }
+
+/*General*/
+  body {background: ivory;
+    font-family: 'Raleway', sans-serif;
+    color: #000000;
+  }
+
+  /*Code for gradient background -
+  *background:
+      linear-gradient(40deg, transparent 40%, #9ab593),
+      linear-gradient(-40deg, #ba7461 20%, #593e4e 90%);*/
+
+  footer {text-align: center;
+    margin:0 auto;
+  }
+
+/*home & footer icons*/
+  i {font-size:30px; color:black;}
+  .fas {font-size:25px; color:black;padding-top:0;}
+
+/*all paragraphs*/
+  p {background: RGB(240, 255, 255);
+    font-family: 'Poiret One', cursive;
+    line-height: 25px; /* fixed size*/
+    font-size: 17px;
+    font-weight: bold;
+  }
+
+/*recent paragraphs - special class*/
+  p.recent-post, h4 {background: BEIGE;
+    margin:0 auto;
+    width:90%;
+    padding:10px;
+  }
+
+/*Read more watch more*/
+  .read, .watch {font-weight:bold;
+    display:flex;
+    justify-content: center;
+    background: BEIGE;
+    margin:0 auto;
+    padding: 1;
+    width:100%;
+  }
+
+
+
+nav {background: ivory;
+  list-style-type: none;
+  display:flex;
+  position:fixed;
+  justify-content: flex-end;
+  top:0;
+  right:7px;
+  width: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom:10px;
+  margin:0 auto;
+  color:black;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*colour & lines of nav links*/
+a {text-decoration:none;
+  font-weight: normal;
+  font-size: 15px;
+  color:black;
+}
+
+/*globe logo - upper left*/
+nav .logo {
+  display:flex;
+  position:fixed;
+  top: 2px;
+  left: 7px;
+  width:35px;
+  bottom: 2px;
+}
+
+/*hover*/
+a:hover, i:hover, a i:hover {
+  color: RGB(102, 205, 170);
+}
+
+/*headings*/
+header, h1, h2, h3 {
+  background: RGB(102, 205, 170);
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+h1 {font-size: 50px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+h2 {font-size: 18px;
+  font-style:italic;
+  padding-top: 0;
+  margin-top: -10px;
+}
+
+h3 {font-size: 30px;
+  padding: 15px;
+}
+/*images*/
+img{
+  width: 30%; margin:3px; padding:2px;}
+
+.boat {
+  width:100%; height:auto;
+}
+
+.instagram {
+  margin:0 auto;
+  text-align:center;
+  flex-wrap:wrap;
+  width:50%;
+  padding-right:4px;
+}
+
+.vlog {
+  margin:0 auto;
+  text-align:center;
+  flex-wrap:wrap;
+  width:50%;
+  padding-left:4px;
+}
+
+.beside {
+  margin:0 auto;
+  display: flex;
+  width: 100%;
+}
+
+/*Forms Styles*/
+.form-wrapper {
+  max-width:90%;
+  margin:0 auto;
+  padding: 10px 20px;
+  background: BEIGE;
+}
+input, textarea{
+  border:1px; solid black;
+}
+
+.flexslider {
+  margin:0 auto;
+  width:50%;
+}
+
+.hamburger,
+.close {
+    display: none;
+}
+
+/*media queries*/
+@media (max-width: 700px) {
+  .hamburger,
+    .close {
+        display: block;
+        font-size: 24px;
+        font-family: "Lucida Sans Unicode", "Arial Unicode MS";
+    }
+    ul.main-nav {
+          top: -100vh;
+          margin-top: 0;
+          position: fixed;
+      }
+    ul.main-nav li {
+          display: block;
+          text-align: center;
+          font-size: 24px;
+      }
+    .main-nav.open-nav {
+          position: fixed;
+          top: 0;
+          right: 0;
+          padding: 2% 10%;
+          z-index: 2;
+          background: #550165;
+          width: 100%;
+          height: 100vh;
+      }
+      .open-nav a {
+          color: white;
+      }
+  body {background:black;}
+  h1 {font-size: 30px;}
+  h2 {font-size:10px;}
+  h3 {font-size:18px;}
+  img {width:40%;}
+  a {font-size:10px;}
+  .beside {
+    margin:0 auto;
+    display: block;
+    width: 100%;
+  }
+  .instagram {
+    margin:0 auto;
+    text-align:center;
+    flex-wrap:wrap;
+    width:100%;
+  }
+  .vlog {
+    margin:50px auto;
+    text-align:center;
+    flex-wrap:wrap;
+    width:100%;
+
+  }
+  iframe{
+    width: 80%;
+    padding:3%;
+  }
+}
+
+/*to make the content change according to size on broswer
+max-width:1300px;min-width:600px;*/
+
+/*SAVED FOR LATER - downloaded font families already linked in my css & html:
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Quicksand', sans-serif;
+  font-family: 'Poiret One', cursive;
+  font-family: 'Shadows Into Light', cursive;*/
